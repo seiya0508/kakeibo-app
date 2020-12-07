@@ -1,2 +1,0 @@
-class KakeibosController < ApplicationController
-end

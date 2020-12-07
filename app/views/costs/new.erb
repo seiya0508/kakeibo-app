@@ -1,5 +1,5 @@
 <h2>★収支登録</h2>
-<%= form_with(model: @kakeibo, local: true) do |f| %>
+<%= form_with(model: @cost, local: true) do |f| %>
 ☆日付
 <%= f.date_field :date,include_blank: "--" %>
 <div>
@@ -21,6 +21,8 @@
 <div>
 保存
 </div>
+<div>
 追加
-
+</div>
+戻る
 <% end %>
