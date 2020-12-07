@@ -1,0 +1,26 @@
+<h2>★収支登録</h2>
+<%= form_with(model: @kakeibo, local: true) do |f| %>
+☆日付
+<%= f.date_field :date,include_blank: "--" %>
+<div>
+☆カテゴリー
+<%= f.select :category, [["食費"], ["交際費"], ["習い事"], ["交通費"], ["娯楽"],["生活費"],["慶弔費"],["衣服"],["美容"],["健康"],["光熱費"],["その他"]], include_blank: "--" %>
+</div>
+<div>
+☆支払い方法
+<%= f.select :pay, [["現金"], ["クレジット"], ["電子マネー"]], include_blank: "--" %>
+</div>
+<div>
+☆金額(円)
+<%= f.text_field :price,placeholder:"半角英数字：例）300" %>
+</div>
+☆メモ
+<div>
+<%= f.text_area :memo, placeholder: "その他入力"%>
+</div>
+<div>
+保存
+</div>
+追加
+
+<% end %>
