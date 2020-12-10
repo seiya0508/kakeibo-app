@@ -15,8 +15,12 @@ class CostsController < ApplicationController
 
   def index
     @cost = Cost.all
+    @price_total = Cost.sum(:price) 
   end
-  
+
+  def edit
+    @cost = Cost.find(params[:id])
+  end
   private
 
   def cost_params
