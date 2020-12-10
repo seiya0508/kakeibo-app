@@ -12,7 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2020_12_07_062144) do
 
-  create_table "Costs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "costs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "day"
+    t.string "category"
+    t.string "pay"
+    t.integer "price"
+    t.string "memo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

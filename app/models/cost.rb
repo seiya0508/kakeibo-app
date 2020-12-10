@@ -1,2 +1,3 @@
 class Cost < ApplicationRecord
+  
 end
