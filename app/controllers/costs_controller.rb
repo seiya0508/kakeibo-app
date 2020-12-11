@@ -15,7 +15,6 @@ class CostsController < ApplicationController
 
   def index
     @cost = Cost.all
-    @total_cost = Cost.sum(:price) 
   end
 
   def edit

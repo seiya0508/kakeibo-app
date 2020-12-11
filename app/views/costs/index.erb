@@ -1,5 +1,5 @@
 <h2>★今月の家計簿</h2>
-¥<%= Cost.all.sum(:price)%> トータル収支
+<div>¥<%= Cost.all.sum(:price)%> トータル収支</div>
 <div>
 <%= link_to "☆収支登録", new_cost_path %>
 </div>
@@ -7,6 +7,7 @@
 <div>
 <%= link_to "☆収入登録", new_income_path %>
 </div>
+
 <% if @cost.present? %>
 <% @cost.each do |cost| %>
 <%= cost.day%><%= link_to "★", edit_cost_path(cost.id) %>
