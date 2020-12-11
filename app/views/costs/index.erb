@@ -1,0 +1,26 @@
+<h2>★今月の家計簿</h2>
+
+<div>¥<%= Cost.all.sum(:price)%> トータル収支</div>
+<div>
+<%= link_to "☆収支登録", new_cost_path %>
+</div>
+
+<div>
+<%= link_to "☆収入登録", new_income_path %>
+</div>
+
+<% if @cost.present? %>
+<% @cost.each do |cost| %>
+<%= cost.day%><%= link_to "★", edit_cost_path(cost.id) %>
+<div></div>
+<div><%= cost.pay%></div>
+<div>¥<%= cost.price%></div>
+<div><%= cost.category%></div>
+<div><%= cost.memo%></div>
+<% end %>
+<% else %>
+<P>登録されていません<p>
+<% end%>
+
+<%= pie_chart ({ "家賃": 55, "食費": 25, "光熱費": 20 }) %>
+<%= pie_chart ({ "給料": 1}) %>
