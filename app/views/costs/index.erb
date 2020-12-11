@@ -1,4 +1,5 @@
 <h2>★今月の家計簿</h2>
+
 <div>¥<%= Cost.all.sum(:price)%> トータル収支</div>
 <div>
 <%= link_to "☆収支登録", new_cost_path %>
